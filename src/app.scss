@@ -1,1 +1,23 @@
+@import "colors";
+@import "base-style";
 
+header{
+  .upper-header{
+    background-color: $header-tundora;
+    padding: 15px 0;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+
+      span{
+        font-size: 14px;
+        color: $header-top-gumbo;
+
+        i{
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
