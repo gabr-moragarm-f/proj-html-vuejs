@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="dist/app.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
   <!-- Wrapper di pagina che contiene l'app -->
@@ -20,8 +23,34 @@
         </div>
       </div>
 
-      <div class="lower header">
+      <div class="lower-header">
+        <div class="container">
+          <div class="logo">
+            <img src="img/avada-drivers-logo-1x.png" alt="avada drivers logo">
+          </div>
 
+          <ul>
+            <li @click="" v-for="(element, index) in headerMenuData" v-bind:class="{active: index === selectedHeaderNavId}">
+              {{element.name.toUpperCase()}}
+
+              <span v-if="element.new" class="new-tag">
+                NEW
+              </span>
+
+              <div v-if="element.subMenu.length !== 0" class="submenu">
+                <ul>
+                  <li v-for="subelement in element.subMenu">{{subelement}}</li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="green-btn">
+                BOOK NOW
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <!-- /Header -->
@@ -30,18 +59,53 @@
     <main>
       <!-- jumbotron -->
       <div class="jumbotron">
+        <div class="container">
+          <h1>
+            Drive with Avada
+          </h1>
 
+          <h3>We offer the finest driving tuition money can buy</h3>
+
+        </div>
       </div>
       <!-- /jumbotron -->
 
       <!-- Lessons form box -->
       <div class="join-lessons-box">
-        <div class="join-lessons-box-description">
+        <div class="container">
+          <div class="join-lessons-description">
+            <h2>Get Behind The Wheel</h2>
 
-        </div>
+            <p class="subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.
+            </p>
 
-        <div class="join-lessons-box-form">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
 
+          <div class="join-lessons-form">
+            <div class="join-lessons-form-card">
+              <h3>First Lesson Free!</h3>
+
+              <p>When you make a block booking with us your first lesson is included free.</p>
+
+              <form class="" action="index.html" method="post">
+                <input type="text" name="Name" v-model="userBookingName" placeholder="Your Name*">
+
+                <input type="text" name="Email" v-model="userBookingEmail" placeholder="Email*">
+
+                <input type="text" name="Telephone" v-model="userBookingTelephone" placeholder="Telephone">
+
+                <input type="text" name="Location" v-model="userBookingLocation" placeholder="Location">
+                
+                <div class="green-btn">
+                  REQUEST A CALLBACK
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
       <!-- /Lessons form box -->
@@ -103,5 +167,6 @@
     <!-- /footer -->
   </div>
   <!-- /Wrapper di pagina che contiene l'app -->
+  <script src="js/script.js" charset="utf-8"></script>
 </body>
 </html>
