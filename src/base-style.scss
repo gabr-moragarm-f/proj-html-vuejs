@@ -19,9 +19,9 @@ h2{
   font-size: 40px;
 }
 
-h3{
-  font-size: 26px;
-}
+// h3{
+//   font-size: 26px;
+// }
 
 ul{
   list-style: none;
@@ -49,4 +49,9 @@ p{
   background: $green-custom;
   border-radius: 30px;
   color: #fff;
+  cursor: pointer;
+
+  &:hover{
+    background: $green-hover;
+  }
 }

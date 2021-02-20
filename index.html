@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Driving Avada</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500&display=swap" rel="stylesheet">
@@ -92,15 +92,15 @@
               <p>When you make a block booking with us your first lesson is included free.</p>
 
               <form class="" action="index.html" method="post">
-                <input type="text" name="Name" v-model="userBookingName" placeholder="Your Name*">
+                <input :class="inputNameStyle" type="text" name="Name" v-model="userBookingName" placeholder="Your Name*">
 
-                <input type="text" name="Email" v-model="userBookingEmail" placeholder="Email*">
+                <input :class="inputEmailStyle" type="text" name="Email" v-model="userBookingEmail" placeholder="Email*">
 
-                <input type="text" name="Telephone" v-model="userBookingTelephone" placeholder="Telephone">
+                <input :class="inputTelephoneStyle" type="text" name="Telephone" v-model="userBookingTelephone" placeholder="Telephone">
 
-                <input type="text" name="Location" v-model="userBookingLocation" placeholder="Location">
-                
-                <div class="green-btn">
+                <input :class="inputLocationStyle" type="text" name="Location" v-model="userBookingLocation" placeholder="Location">
+
+                <div @click="sendBooking" class="green-btn">
                   REQUEST A CALLBACK
                 </div>
               </form>
@@ -112,13 +112,23 @@
 
       <!-- Number box -->
       <div class="number-box">
+        <div class="container">
+          <div class="number-box-left">
+            <h2>Start Learning to Drive Today</h2>
 
+            <h3>Give us a call to schedule your first driving lesson</h3>
+          </div>
+
+          <div class="number-box-right">
+            <i class="fas fa-phone"></i> 1-800-555-555
+          </div>
+        </div>
       </div>
       <!-- /Number box -->
 
       <!-- Courses box -->
       <div class="courses-box">
-
+        
       </div>
       <!-- /Courses box -->
 

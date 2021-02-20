@@ -38,6 +38,7 @@ header{
       .logo{
         height: 50px;
         width: 350px;
+        cursor: pointer;
 
         img{
           height: 100%;
@@ -52,6 +53,7 @@ header{
 
         li{
           color: #fff;
+          cursor: pointer;
 
           &.active{
             color: $green-custom;
@@ -97,6 +99,7 @@ main{
 
       h3{
         font-weight: normal;
+        font-size: 26px;
       }
     }
   }
@@ -108,7 +111,7 @@ main{
 
       .join-lessons-description{
         width: 50%;
-        padding: 80px 5% 80px 0;
+        padding: 80px 3% 80px 0;
 
         h2{
           margin-bottom: 30px;
@@ -127,13 +130,14 @@ main{
 
       .join-lessons-form{
         width: 50%;
-        padding-left: 5%;
+        padding-left: 2%;
 
         &-card{
           @include card-style;
           transform: translateY(-40px);
 
           h3{
+            font-size: 30px;
             margin-bottom: 30px;
             text-align: center;
             color: $green-custom;
@@ -160,6 +164,14 @@ main{
               &::placeholder{
                 color: $custom-grey;
               }
+
+              &.required{
+                border:2px solid red;
+
+                &::placeholder{
+                  color: red;
+                }
+              }
             }
 
             .green-btn{
@@ -173,10 +185,39 @@ main{
   }
 
   .number-box{
-    height: 150px;
     padding: 60px 0;
     background-image: url(../img/horizontal-cta-background.jpg);
     background-position: center;
     background-size: cover;
+    color: #fff;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5px;
+
+      .number-box-left{
+        width: 800px;
+        padding-bottom: 30px;
+
+        h2{
+          margin-bottom: 10px;
+        }
+
+        h3{
+          font-size: 21px;
+        }
+      }
+
+      .number-box-right{
+        width: calc(100% - 800px);
+        font-size: 30px;
+      }
+    }
+  }
+
+  .courses-box{
+    padding: 80px 0;
   }
 }

@@ -38,10 +38,61 @@ var app = new Vue({
     userBookingEmail: '',
     userBookingTelephone: '',
     userBookingLocation: '',
-    bookings: {}
+    bookings: [],
+    inputNameStyle: '',
+    inputEmailStyle: '',
+    inputTelephoneStyle: '',
+    inputLocationStyle: ''
   },
   methods:{
+    hasNumber:function(string) {
+      return /\d/.test(string);
+    },
+    formValidation: function() {
+      let validationFlag = true;
 
+      if (this.userBookingName === '') {
+        this.inputNameStyle = 'required';
+
+        validationFlag = false;
+      }
+
+      if (this.hasNumber(this.userBookingName)) {
+        this.inputNameStyle = 'required';
+
+        validationFlag = false;
+      }
+
+      if (this.userBookingEmail === '') {
+        this.inputNameStyle = 'required';
+
+        validationFlag = false;
+      }
+
+      if (!this.userBookingEmail.includes('@')) {
+        this.inputEmailStyle = 'required';
+
+        validationFlag = false;
+      }
+
+      if (validationFlag) {
+        return true;
+      }
+
+      return false;
+    },
+    sendBooking: function() {
+      if (this.formValidation()) {
+        return;
+      }
+
+      this.bookings.push({
+        name: this.userBookingName,
+        email: this.userBookingEmail,
+        telephone: this.userBookingTelephone,
+        location: this.userBookingLocation
+      });
+    },
   }
 });
 
