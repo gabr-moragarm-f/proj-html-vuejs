@@ -1,8 +1,13 @@
+$cards-shadow-1: 1px;
+
+$cards-shadow-2: 30px 5px #bbb;
+
 @mixin card-style {
   padding: 50px 40px;
   border-radius: 10px;
-  box-shadow: 1px 50px 30px 5px #eee;
   background-color: #fff;
+  text-align: center;
+  height: fit-content;
 }
 
 *{
@@ -19,9 +24,9 @@ h2{
   font-size: 40px;
 }
 
-// h3{
-//   font-size: 26px;
-// }
+h4{
+  font-size: 21px;
+}
 
 ul{
   list-style: none;
@@ -29,6 +34,7 @@ ul{
 
 p{
   font-size: 16px;
+  line-height: 2;
   color: $custom-grey;
 }
 
@@ -50,8 +56,29 @@ p{
   border-radius: 30px;
   color: #fff;
   cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: bold;
 
   &:hover{
     background: $green-hover;
+  }
+}
+
+.courses-btn{
+  padding: 9px 20px;
+  border-radius: 30px;
+  color: $courses-blue;
+  border: 3px solid $courses-blue;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+
+  &:hover{
+    color: $green-custom;
+    border: 3px solid $green-custom;
   }
 }

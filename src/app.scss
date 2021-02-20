@@ -81,143 +81,194 @@ header{
   }
 }
 
-main{
-  .jumbotron{
-    background-image: url(../img/homepage-hero-background.jpg);
-    background-position: center top;
-    background-size: cover;
-    color: #fff;
 
-    .container{
-      padding-top: 400px;
-      padding-bottom: 280px;
+.jumbotron{
+  background-image: url(../img/homepage-hero-background.jpg);
+  background-position: center top;
+  background-size: cover;
+  color: #fff;
 
-      h1{
-        font-size: 60px;
-        margin-bottom: 15px;
-      }
+  .container{
+    padding-top: 400px;
+    padding-bottom: 280px;
 
-      h3{
-        font-weight: normal;
-        font-size: 26px;
-      }
+    h1{
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    h3{
+      font-weight: normal;
+      font-size: 26px;
     }
   }
+}
 
-  .join-lessons-box{
+.join-lessons-box{
 
-    .container{
-      display: flex;
+  .container{
+    display: flex;
 
-      .join-lessons-description{
-        width: 50%;
-        padding: 80px 3% 80px 0;
+    .join-lessons-description{
+      width: 50%;
+      padding: 80px 3% 80px 0;
 
-        h2{
+      h2{
+        margin-bottom: 30px;
+        color: $h2-grey;
+      }
+
+      .subtitle{
+        font-size: 21px;
+        // line-height: 40px;
+        margin-bottom: 30px;
+      }
+
+      p{
+        // line-height: 30px;
+      }
+    }
+
+    .join-lessons-form{
+      width: 50%;
+      padding-left: 2%;
+
+      &-card{
+        @include card-style;
+        box-shadow: $cards-shadow-1 50px $cards-shadow-2;
+        transform: translateY(-40px);
+
+        h3{
+          font-size: 30px;
           margin-bottom: 30px;
-        }
-
-        .subtitle{
-          font-size: 21px;
-          line-height: 40px;
-          margin-bottom: 30px;
+          text-align: center;
+          color: $green-custom;
         }
 
         p{
-          line-height: 30px;
+          text-align: center;
+          margin-bottom: 30px;
         }
-      }
 
-      .join-lessons-form{
-        width: 50%;
-        padding-left: 2%;
+        form{
+          display: flex;
+          flex-direction: column;
 
-        &-card{
-          @include card-style;
-          transform: translateY(-40px);
-
-          h3{
-            font-size: 30px;
+          input{
+            height: 45px;
+            padding: 0 15px;
             margin-bottom: 30px;
-            text-align: center;
-            color: $green-custom;
-          }
+            border: 1px solid $grey-input-border-placeholder;
+            border-radius: 5px;
+            background-color: $grey-input-background;
+            outline: none;
 
-          p{
-            text-align: center;
-            margin-bottom: 30px;
-          }
+            &::placeholder{
+              color: $custom-grey;
+            }
 
-          form{
-            display: flex;
-            flex-direction: column;
-
-            input{
-              height: 45px;
-              padding: 0 15px;
-              margin-bottom: 30px;
-              border: 1px solid $grey-input-border-placeholder;
-              border-radius: 5px;
-              background-color: $grey-input-background;
-              outline: none;
+            &.required{
+              border:2px solid red;
 
               &::placeholder{
-                color: $custom-grey;
+                color: red;
               }
-
-              &.required{
-                border:2px solid red;
-
-                &::placeholder{
-                  color: red;
-                }
-              }
-            }
-
-            .green-btn{
-              width: fit-content;
-              margin: 0 auto;
             }
           }
         }
       }
     }
   }
+}
 
-  .number-box{
-    padding: 60px 0;
-    background-image: url(../img/horizontal-cta-background.jpg);
-    background-position: center;
-    background-size: cover;
-    color: #fff;
+.number-box{
+  padding: 60px 0;
+  background-image: url(../img/horizontal-cta-background.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
 
-    .container{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
 
-      .number-box-left{
-        width: 800px;
-        padding-bottom: 30px;
+    .number-box-left{
+      width: 800px;
+      padding-bottom: 30px;
 
-        h2{
-          margin-bottom: 10px;
-        }
-
-        h3{
-          font-size: 21px;
-        }
+      h2{
+        margin-bottom: 10px;
       }
 
-      .number-box-right{
-        width: calc(100% - 800px);
-        font-size: 30px;
+      h3{
+        font-size: 21px;
       }
     }
-  }
 
-  .courses-box{
-    padding: 80px 0;
+    .number-box-right{
+      width: calc(100% - 800px);
+      font-size: 30px;
+    }
+  }
+}
+
+.courses-box{
+  background-image: url(../img/promise-background.jpg);
+  background-position: bottom;
+  background-size: cover;
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+    .info-card{
+      @include card-style;
+      box-shadow: $cards-shadow-1 40px $cards-shadow-2;
+      transform: translateY(-30px);
+      position: relative;
+      overflow: hidden;
+      width: 430px;
+
+      .img-new{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img{
+          width: 100%
+        }
+      }
+
+      h2{
+        color: $h2-grey;
+      }
+
+      p{
+        padding: 40px 0;
+      }
+    }
+
+    .course-box{
+      padding: 80px 0 160px;
+      text-align: center;
+
+      &-img{
+        width: 192px;
+        margin-bottom: 20px;
+
+        img{
+          width: 100%;
+        }
+      }
+
+      h4{
+        color: $courses-blue;
+        margin-bottom: 15px;
+      }
+    }
   }
 }

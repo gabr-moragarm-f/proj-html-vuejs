@@ -12,12 +12,17 @@ h2 {
   font-size: 40px;
 }
 
+h4 {
+  font-size: 21px;
+}
+
 ul {
   list-style: none;
 }
 
 p {
   font-size: 16px;
+  line-height: 2;
   color: #929AA3;
 }
 
@@ -39,9 +44,33 @@ p {
   border-radius: 30px;
   color: #fff;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: bold;
 }
 .green-btn:hover {
   background: #69AA53;
+}
+
+.courses-btn {
+  padding: 9px 20px;
+  border-radius: 30px;
+  color: #7799ad;
+  border: 3px solid #7799ad;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: bold;
+}
+.courses-btn:hover {
+  color: #7abc64;
+  border: 3px solid #7abc64;
 }
 
 header {
@@ -110,68 +139,70 @@ header .lower-header .container ul li .new-tag {
   border-radius: 3px;
 }
 
-main .jumbotron {
+.jumbotron {
   background-image: url(../img/homepage-hero-background.jpg);
   background-position: center top;
   background-size: cover;
   color: #fff;
 }
-main .jumbotron .container {
+.jumbotron .container {
   padding-top: 400px;
   padding-bottom: 280px;
 }
-main .jumbotron .container h1 {
+.jumbotron .container h1 {
   font-size: 60px;
   margin-bottom: 15px;
 }
-main .jumbotron .container h3 {
+.jumbotron .container h3 {
   font-weight: normal;
   font-size: 26px;
 }
-main .join-lessons-box .container {
+
+.join-lessons-box .container {
   display: flex;
 }
-main .join-lessons-box .container .join-lessons-description {
+.join-lessons-box .container .join-lessons-description {
   width: 50%;
   padding: 80px 3% 80px 0;
 }
-main .join-lessons-box .container .join-lessons-description h2 {
+.join-lessons-box .container .join-lessons-description h2 {
   margin-bottom: 30px;
+  color: #494c4e;
 }
-main .join-lessons-box .container .join-lessons-description .subtitle {
+.join-lessons-box .container .join-lessons-description .subtitle {
   font-size: 21px;
-  line-height: 40px;
   margin-bottom: 30px;
 }
-main .join-lessons-box .container .join-lessons-description p {
-  line-height: 30px;
-}
-main .join-lessons-box .container .join-lessons-form {
+.join-lessons-box .container .join-lessons-form {
   width: 50%;
   padding-left: 2%;
 }
-main .join-lessons-box .container .join-lessons-form-card {
+.join-lessons-box .container .join-lessons-form-card {
   padding: 50px 40px;
   border-radius: 10px;
-  box-shadow: 1px 50px 30px 5px #eee;
   background-color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 1px 50px 30px 5px #bbb;
   transform: translateY(-40px);
 }
-main .join-lessons-box .container .join-lessons-form-card h3 {
+.join-lessons-box .container .join-lessons-form-card h3 {
   font-size: 30px;
   margin-bottom: 30px;
   text-align: center;
   color: #7abc64;
 }
-main .join-lessons-box .container .join-lessons-form-card p {
+.join-lessons-box .container .join-lessons-form-card p {
   text-align: center;
   margin-bottom: 30px;
 }
-main .join-lessons-box .container .join-lessons-form-card form {
+.join-lessons-box .container .join-lessons-form-card form {
   display: flex;
   flex-direction: column;
 }
-main .join-lessons-box .container .join-lessons-form-card form input {
+.join-lessons-box .container .join-lessons-form-card form input {
   height: 45px;
   padding: 0 15px;
   margin-bottom: 30px;
@@ -180,60 +211,107 @@ main .join-lessons-box .container .join-lessons-form-card form input {
   background-color: #f7f7f7;
   outline: none;
 }
-main .join-lessons-box .container .join-lessons-form-card form input::-moz-placeholder {
+.join-lessons-box .container .join-lessons-form-card form input::-moz-placeholder {
   color: #929AA3;
 }
-main .join-lessons-box .container .join-lessons-form-card form input:-ms-input-placeholder {
+.join-lessons-box .container .join-lessons-form-card form input:-ms-input-placeholder {
   color: #929AA3;
 }
-main .join-lessons-box .container .join-lessons-form-card form input::placeholder {
+.join-lessons-box .container .join-lessons-form-card form input::placeholder {
   color: #929AA3;
 }
-main .join-lessons-box .container .join-lessons-form-card form input.required {
+.join-lessons-box .container .join-lessons-form-card form input.required {
   border: 2px solid red;
 }
-main .join-lessons-box .container .join-lessons-form-card form input.required::-moz-placeholder {
+.join-lessons-box .container .join-lessons-form-card form input.required::-moz-placeholder {
   color: red;
 }
-main .join-lessons-box .container .join-lessons-form-card form input.required:-ms-input-placeholder {
+.join-lessons-box .container .join-lessons-form-card form input.required:-ms-input-placeholder {
   color: red;
 }
-main .join-lessons-box .container .join-lessons-form-card form input.required::placeholder {
+.join-lessons-box .container .join-lessons-form-card form input.required::placeholder {
   color: red;
 }
-main .join-lessons-box .container .join-lessons-form-card form .green-btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-main .number-box {
+
+.number-box {
   padding: 60px 0;
   background-image: url(../img/horizontal-cta-background.jpg);
   background-position: center;
   background-size: cover;
   color: #fff;
 }
-main .number-box .container {
+.number-box .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
 }
-main .number-box .container .number-box-left {
+.number-box .container .number-box-left {
   width: 800px;
   padding-bottom: 30px;
 }
-main .number-box .container .number-box-left h2 {
+.number-box .container .number-box-left h2 {
   margin-bottom: 10px;
 }
-main .number-box .container .number-box-left h3 {
+.number-box .container .number-box-left h3 {
   font-size: 21px;
 }
-main .number-box .container .number-box-right {
+.number-box .container .number-box-right {
   width: calc(100% - 800px);
   font-size: 30px;
 }
-main .courses-box {
-  padding: 80px 0;
+
+.courses-box {
+  background-image: url(../img/promise-background.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+.courses-box .container {
+  display: flex;
+  justify-content: space-between;
+}
+.courses-box .container .info-card {
+  padding: 50px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 1px 40px 30px 5px #bbb;
+  transform: translateY(-30px);
+  position: relative;
+  overflow: hidden;
+  width: 430px;
+}
+.courses-box .container .info-card .img-new {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.courses-box .container .info-card .img-new img {
+  width: 100%;
+}
+.courses-box .container .info-card h2 {
+  color: #494c4e;
+}
+.courses-box .container .info-card p {
+  padding: 40px 0;
+}
+.courses-box .container .course-box {
+  padding: 80px 0 160px;
+  text-align: center;
+}
+.courses-box .container .course-box-img {
+  width: 192px;
+  margin-bottom: 20px;
+}
+.courses-box .container .course-box-img img {
+  width: 100%;
+}
+.courses-box .container .course-box h4 {
+  color: #7799ad;
+  margin-bottom: 15px;
 }
