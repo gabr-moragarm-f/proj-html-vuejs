@@ -471,6 +471,11 @@ header .lower-header .container ul li .new-tag {
 
 .news-box {
   background-image: url(../img/latestnews-background.jpg);
+  background-size: cover;
+  background-position: right bottom;
+}
+.news-box .container {
+  padding-bottom: 40px;
 }
 .news-box .container .news-box-card {
   padding: 50px 40px;
@@ -481,4 +486,55 @@ header .lower-header .container ul li .new-tag {
   height: -moz-fit-content;
   height: fit-content;
   z-index: 1;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: translateY(-35px);
+  box-shadow: 1px 40px 30px 5px #777, 0 -5px #7799ad;
+}
+.news-box .container .news-box-card h2 {
+  color: #494c4e;
+  margin-bottom: 40px;
+}
+.news-box .container .news-box-card-content {
+  display: flex;
+}
+.news-box .container .news-box-card-content-article {
+  width: 50%;
+  padding: 15px;
+}
+.news-box .container .news-box-card-content-article-img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.news-box .container .news-box-card-content-article-img img {
+  width: 100%;
+}
+.news-box .container .news-box-card-content-article h4 {
+  font-size: 21px;
+  color: #7abc64;
+  margin-bottom: 10px;
+}
+.news-box .container .news-box-card-content-article-info {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.news-box .container .news-box-card-content-article-info-date {
+  color: #929aa3;
+}
+.news-box .container .news-box-card-content-article-info-pipe {
+  color: #929aa3;
+  padding: 0 5px;
+}
+.news-box .container .news-box-card-content-article-info-comment {
+  color: #7abc64;
+}
+.news-box .container .news-box-card .green-btn {
+  margin-top: 60px;
+}
+.news-box .container .triangle-img {
+  width: 100%;
+  transform: translateY(-35px);
+}
+.news-box .container .triangle-img img {
+  width: 100%;
 }
