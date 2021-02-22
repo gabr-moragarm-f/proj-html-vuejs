@@ -33,6 +33,20 @@ var app = new Vue({
         new: false
       }
     ],
+    percentageData:[
+      {
+        name: 'pass rate',
+        percentage: '95'
+      },
+      {
+        name: 'referral rate',
+        percentage: '100'
+      },
+      {
+        name: 'accident rate',
+        percentage: '0'
+      },
+    ],
     selectedHeaderNavId: 0,
     userBookingName: '',
     userBookingEmail: '',

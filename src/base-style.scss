@@ -2,12 +2,33 @@ $cards-shadow-1: 1px;
 
 $cards-shadow-2: 30px 5px #bbb;
 
+$cards-green-shadow: 0 -5px $green-custom;
+
 @mixin card-style {
   padding: 50px 40px;
   border-radius: 10px;
   background-color: #fff;
   text-align: center;
   height: fit-content;
+  z-index: 1;
+}
+
+@mixin three-cards-style {
+  width: calc(33% - 10px);
+
+  &:first-child{
+    box-shadow: $cards-shadow-1 20px $cards-shadow-2, $cards-green-shadow;
+  }
+
+  &:nth-child(2){
+    margin: 0 10px;
+    width: 34%;
+    box-shadow: 20px 20px 30px #bbb, $cards-green-shadow;
+  }
+
+  &:last-child{
+    box-shadow: 20px 20px 30px #bbb, $cards-green-shadow;
+  }
 }
 
 *{
@@ -22,10 +43,6 @@ body{
 
 h2{
   font-size: 40px;
-}
-
-h4{
-  font-size: 21px;
 }
 
 ul{
@@ -60,6 +77,8 @@ p{
   margin: 0 auto;
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
+  height: fit-content;
 
   &:hover{
     background: $green-hover;

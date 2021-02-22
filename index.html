@@ -94,7 +94,7 @@
               <form class="" action="index.html" method="post">
                 <input :class="inputNameStyle" type="text" name="Name" v-model="userBookingName" placeholder="Your Name*">
 
-                <input :class="inputEmailStyle" type="text" name="Email" v-model="userBookingEmail" placeholder="Email*">
+                <input :class="inputEmailStyle" type="email" name="Email" v-model="userBookingEmail" placeholder="Email*">
 
                 <input :class="inputTelephoneStyle" type="text" name="Telephone" v-model="userBookingTelephone" placeholder="Telephone">
 
@@ -185,26 +185,100 @@
       <!-- /Courses box -->
 
       <!-- Generic data round bars box -->
-      <div class="round-bars-box">
+      <div class="progress-rings-box">
         <div class="triangle-bg">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#e4eaed;padding:0;">
-              <path d="M-1 -1 L50 99 L101 -1 Z"></path>
-            </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#e4eaed;padding:0;">
+            <path d="M-1 -1 L50 99 L101 -1 Z"></path>
+          </svg>
         </div>
 
         <div class="container">
-          <div class="round-bars-card">
-            <span class="percentage">100%</span>
+          <div v-for="element in percentageData" class="progress-ring-card">
+            <span class="percentage">{{element.percentage}}%</span>
 
-            <h4>Test</h4>
+            <h4>{{element.name.toUpperCase()}}</h4>
           </div>
         </div>
       </div>
       <!-- /Generic data round bars box -->
 
       <!-- Instructors box -->
-      <div class="instructors box">
+      <div class="instructors-box">
+        <div class="container">
+          <h2>Your Instructors</h2>
 
+          <div class="info-box">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.
+            </p>
+
+            <div class="green-btn">
+              MORE ABOUT US
+            </div>
+          </div>
+
+          <div class="instructors-cards-box">
+            <div class="instructor-card">
+              <div class="instructor-img" title="instructor-mikehart">
+                <img src="img/instructor-mikehart-400x254.jpg" alt="instructor mike hart img">
+              </div>
+
+              <h3>Mike Hart</h3>
+
+              <div class="instructor-socials">
+                <i class="fab fa-facebook-f" title="Facebook"></i>
+
+                <i class="fab fa-twitter" title="Twitter"></i>
+
+                <i class="fab fa-instagram" title="Instagram"></i>
+              </div>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+
+            <div class="instructor-card">
+              <div class="instructor-img" title="instructor-johnsmith">
+                <img src="img/instructor-johnsmith-400x254.jpg" alt="instructor john smith img">
+              </div>
+
+              <h3>John Smith</h3>
+
+              <div class="instructor-socials">
+                <i class="fab fa-facebook-f" title="Facebook"></i>
+
+                <i class="fab fa-twitter" title="Twitter"></i>
+
+                <i class="fab fa-instagram" title="Instagram"></i>
+              </div>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+
+            <div class="instructor-card">
+              <div class="instructor-img" title="instructor-angelahart">
+                <img src="img/instructor-angelahart-400x254.jpg" alt="instructor angela hart img">
+              </div>
+
+              <h3>Angela Hart</h3>
+
+              <div class="instructor-socials">
+                <i class="fab fa-facebook-f" title="Facebook"></i>
+
+                <i class="fab fa-twitter" title="Twitter"></i>
+
+                <i class="fab fa-instagram" title="Instagram"></i>
+              </div>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Instructors box -->
 
@@ -240,6 +314,7 @@
     </footer>
     <!-- /footer -->
   </div>
+  eefw
   <!-- /Wrapper di pagina che contiene l'app -->
   <script src="js/script.js" charset="utf-8"></script>
 </body>

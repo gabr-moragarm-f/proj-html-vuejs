@@ -268,6 +268,102 @@ header{
       h4{
         color: $courses-blue;
         margin-bottom: 15px;
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+.progress-rings-box{
+  position: relative;
+  padding-bottom: 30px;
+
+  .triangle-bg{
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+  }
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+
+    .progress-ring-card{
+      @include card-style;
+      padding: 50px;
+      @include three-cards-style;
+
+      .percentage{
+        font-size: 50px;
+        color: $percentage-grey;
+      }
+
+      h4{
+        color: $custom-grey;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.instructors-box{
+  padding-top: 80px;
+
+  .container{
+    h2{
+      color: $h2-grey;
+      margin-bottom: 30px;
+    }
+
+    .info-box{
+      display: flex;
+      margin-bottom: 60px;
+
+      p{
+        font-size: 21px;
+        flex: 3;
+        padding-right: 30px;
+      }
+
+      .green-btn{
+        flex: 1;
+      }
+    }
+
+    .instructors-cards-box{
+      display: flex;
+
+      .instructor-card{
+        @include card-style;
+        @include three-cards-style;
+
+        .instructor-img{
+          width: 100%;
+
+          img{
+            width: 100%;
+
+            &:hover{
+              transform: scale(1.03);
+              box-shadow: 5px 5px 20px 10px #bbb;
+              transition: transform 0.5s;
+            }
+          }
+        }
+
+        h3{
+          color: $h2-grey;
+          font-size: 24px;
+          margin-top: 30px;
+        }
+
+        .instructor-socials{
+          i{
+            color: $custom-grey;
+            margin: 15px 10px;
+          }
+        }
       }
     }
   }

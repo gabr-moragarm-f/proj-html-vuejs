@@ -12,10 +12,6 @@ h2 {
   font-size: 40px;
 }
 
-h4 {
-  font-size: 21px;
-}
-
 ul {
   list-style: none;
 }
@@ -50,6 +46,10 @@ p {
   margin: 0 auto;
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .green-btn:hover {
   background: #69AA53;
@@ -185,6 +185,7 @@ header .lower-header .container ul li .new-tag {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  z-index: 1;
   box-shadow: 1px 50px 30px 5px #bbb;
   transform: translateY(-40px);
 }
@@ -278,6 +279,7 @@ header .lower-header .container ul li .new-tag {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  z-index: 1;
   box-shadow: 1px 40px 30px 5px #bbb;
   transform: translateY(-30px);
   position: relative;
@@ -314,4 +316,116 @@ header .lower-header .container ul li .new-tag {
 .courses-box .container .course-box h4 {
   color: #7799ad;
   margin-bottom: 15px;
+  font-size: 21px;
+}
+
+.progress-rings-box {
+  position: relative;
+  padding-bottom: 30px;
+}
+.progress-rings-box .triangle-bg {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+}
+.progress-rings-box .container {
+  display: flex;
+  justify-content: space-between;
+}
+.progress-rings-box .container .progress-ring-card {
+  padding: 50px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 1;
+  padding: 50px;
+  width: calc(33% - 10px);
+}
+.progress-rings-box .container .progress-ring-card:first-child {
+  box-shadow: 1px 20px 30px 5px #bbb, 0 -5px #7abc64;
+}
+.progress-rings-box .container .progress-ring-card:nth-child(2) {
+  margin: 0 10px;
+  width: 34%;
+  box-shadow: 20px 20px 30px #bbb, 0 -5px #7abc64;
+}
+.progress-rings-box .container .progress-ring-card:last-child {
+  box-shadow: 20px 20px 30px #bbb, 0 -5px #7abc64;
+}
+.progress-rings-box .container .progress-ring-card .percentage {
+  font-size: 50px;
+  color: #929aa3;
+}
+.progress-rings-box .container .progress-ring-card h4 {
+  color: #929AA3;
+  font-size: 15px;
+}
+
+.instructors-box {
+  padding-top: 80px;
+}
+.instructors-box .container h2 {
+  color: #494c4e;
+  margin-bottom: 30px;
+}
+.instructors-box .container .info-box {
+  display: flex;
+  margin-bottom: 60px;
+}
+.instructors-box .container .info-box p {
+  font-size: 21px;
+  flex: 3;
+  padding-right: 30px;
+}
+.instructors-box .container .info-box .green-btn {
+  flex: 1;
+}
+.instructors-box .container .instructors-cards-box {
+  display: flex;
+}
+.instructors-box .container .instructors-cards-box .instructor-card {
+  padding: 50px 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 1;
+  width: calc(33% - 10px);
+}
+.instructors-box .container .instructors-cards-box .instructor-card:first-child {
+  box-shadow: 1px 20px 30px 5px #bbb, 0 -5px #7abc64;
+}
+.instructors-box .container .instructors-cards-box .instructor-card:nth-child(2) {
+  margin: 0 10px;
+  width: 34%;
+  box-shadow: 20px 20px 30px #bbb, 0 -5px #7abc64;
+}
+.instructors-box .container .instructors-cards-box .instructor-card:last-child {
+  box-shadow: 20px 20px 30px #bbb, 0 -5px #7abc64;
+}
+.instructors-box .container .instructors-cards-box .instructor-card .instructor-img {
+  width: 100%;
+}
+.instructors-box .container .instructors-cards-box .instructor-card .instructor-img img {
+  width: 100%;
+}
+.instructors-box .container .instructors-cards-box .instructor-card .instructor-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 5px 5px 20px 10px #bbb;
+  transition: transform 0.5s;
+}
+.instructors-box .container .instructors-cards-box .instructor-card h3 {
+  color: #494c4e;
+  font-size: 24px;
+  margin-top: 30px;
+}
+.instructors-box .container .instructors-cards-box .instructor-card .instructor-socials i {
+  color: #929AA3;
+  margin: 15px 10px;
 }
