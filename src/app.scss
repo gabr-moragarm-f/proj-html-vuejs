@@ -159,9 +159,7 @@ header{
             padding: 0 15px;
             margin-bottom: 30px;
             border: 1px solid $grey-input-border-placeholder;
-            border-radius: 5px;
             background-color: $grey-input-background;
-            outline: none;
 
             &::placeholder{
               color: $custom-grey;
@@ -491,5 +489,36 @@ header{
         width: 100%;
       }
     }
+  }
+}
+
+.signup-newsletter-box{
+  background-image: url(../img/newsletter_background.jpg);
+  background-size: cover;
+  padding: 50px 30px 70px;;
+  text-align: center;
+
+  h2{
+    font-size: 30px;
+    color: $h2-grey;
+    margin-bottom: 40px;
+  }
+
+  input{
+    height: 50px;
+    width: 600px;
+    border: 1px solid $grey-input-border-placeholder;
+    padding: 0 15px;
+    margin-bottom: 30px;
+  }
+
+  .green-btn{
+    width: 600px;
+    margin-bottom: 30px;
+  }
+
+  span{
+    font-size: 14px;
+    color: $custom-grey;
   }
 }
