@@ -522,3 +522,71 @@ header{
     color: $custom-grey;
   }
 }
+
+footer{
+  .upper-footer{
+    background-image: url(../img/footer-background-color.jpg);
+    background-position: center;
+    padding: 70px 0;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+
+      .footer-info{
+        &-logo{
+          width: 220px;
+
+          img{
+            width: 100%;
+          }
+        }
+
+        p{
+          font-size: 13px;
+        }
+      }
+
+
+
+      .footer-book-now{
+        &-img{
+          width: 100%;
+          margin-bottom: 30px;
+
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .lower-footer{
+    background: #1C1D1E;
+    padding: 50px 0;
+
+    .container{
+      display: flex;
+      justify-content: space-between;
+
+      .copyright{
+        font-size: 12px;
+        color: $lower-footer-grey;
+
+        a{
+          color: $green-custom;
+        }
+      }
+
+      .socials{
+        display: flex;
+
+        li{
+          padding: 0 10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

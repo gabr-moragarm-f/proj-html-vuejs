@@ -37,6 +37,11 @@ $cards-green-shadow: 0 -5px $green-custom;
   padding: 0;
 }
 
+a, a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: inherit;
+}
+
 body{
   font-family: 'Mulish', sans-serif;
 }

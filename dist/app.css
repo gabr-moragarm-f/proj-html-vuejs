@@ -4,6 +4,11 @@
   padding: 0;
 }
 
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   font-family: "Mulish", sans-serif;
 }
@@ -568,4 +573,52 @@ header .lower-header .container ul li .new-tag {
 .signup-newsletter-box span {
   font-size: 14px;
   color: #929AA3;
+}
+
+footer .upper-footer {
+  background-image: url(../img/footer-background-color.jpg);
+  background-position: center;
+  padding: 70px 0;
+}
+footer .upper-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .upper-footer .container .footer-info-logo {
+  width: 220px;
+}
+footer .upper-footer .container .footer-info-logo img {
+  width: 100%;
+}
+footer .upper-footer .container .footer-info p {
+  font-size: 13px;
+}
+footer .upper-footer .container .footer-book-now-img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+footer .upper-footer .container .footer-book-now-img img {
+  width: 100%;
+}
+footer .lower-footer {
+  background: #1C1D1E;
+  padding: 50px 0;
+}
+footer .lower-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .lower-footer .container .copyright {
+  font-size: 12px;
+  color: #72767a;
+}
+footer .lower-footer .container .copyright a {
+  color: #7abc64;
+}
+footer .lower-footer .container .socials {
+  display: flex;
+}
+footer .lower-footer .container .socials li {
+  padding: 0 10px;
+  color: #fff;
 }
