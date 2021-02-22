@@ -318,7 +318,6 @@ header{
 
     .info-box{
       display: flex;
-      margin-bottom: 60px;
 
       p{
         font-size: 21px;
@@ -335,6 +334,7 @@ header{
       display: flex;
 
       .instructor-card{
+        transform: translateY(90px);
         @include card-style;
         @include three-cards-style;
 
@@ -365,6 +365,64 @@ header{
           }
         }
       }
+    }
+  }
+}
+
+.testimonials-box{
+  background-image: url(../img/testimonial-background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 190px 0 120px;
+
+  &-slider{
+    margin: 0 auto;
+    text-align: center;
+
+    h2{
+      color: $h2-grey;
+      margin-bottom: 10px;
+    }
+
+    p:first-of-type{
+      font-size: 21px;
+    }
+
+    &-img{
+      width: 150px;
+      margin: 60px auto 30px;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    p:last-of-type{
+      font-size: 18px;
+      width: 740px;
+      margin: 0 auto 30px;
+      letter-spacing: 2px;
+    }
+
+    span{
+      font-size: 18px;
+      font-weight: bold;
+      color: $custom-grey;
+    }
+
+    &-nav{
+      margin-top: 30px;
+    }
+  }
+}
+
+.news-box{
+  background-image: url(../img/latestnews-background.jpg);
+  // background-position: right bottom;
+
+  .container{
+    .news-box-card{
+      @include card-style;
     }
   }
 }
