@@ -31,6 +31,26 @@ $cards-green-shadow: 0 -5px $green-custom;
   }
 }
 
+@mixin fixed-buttons{
+  width: 66px;
+  height: 66px;
+  background-color: #fff;
+  text-align: center;
+  padding: 6px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #666;
+  color: $fixed-buttons-grey;
+  cursor: pointer;
+
+  i{
+    font-size: 30px;
+  }
+
+  span{
+    font-size: 12px;
+  }
+}
+
 *{
   box-sizing: border-box;
   margin: 0;

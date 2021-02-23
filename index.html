@@ -30,7 +30,7 @@
           </div>
 
           <ul>
-            <li @click="" v-for="(element, index) in headerMenuData" v-bind:class="{active: index === selectedHeaderNavId}">
+            <li @click="" v-for="(element, index) in header.menuData" v-bind:class="{active: index === header.selectedId}">
               {{element.name.toUpperCase()}}
 
               <span v-if="element.new" class="new-tag">
@@ -92,13 +92,13 @@
               <p>When you make a block booking with us your first lesson is included free.</p>
 
               <form class="" action="index.html" method="post">
-                <input :class="inputNameStyle" type="text" name="Name" v-model="userBookingName" placeholder="Your Name*">
+                <input :class="form.style.name" type="text" name="Name" v-model="form.inputs.name" placeholder="Your Name*">
 
-                <input :class="inputEmailStyle" type="email" name="Email" v-model="userBookingEmail" placeholder="Email*">
+                <input :class="form.style.email" type="email" name="Email" v-model="form.inputs.email" placeholder="Email*">
 
-                <input :class="inputTelephoneStyle" type="text" name="Telephone" v-model="userBookingTelephone" placeholder="Telephone">
+                <input :class="form.style.telephone" type="text" name="Telephone" v-model="form.inputs.telephone" placeholder="Telephone">
 
-                <input :class="inputLocationStyle" type="text" name="Location" v-model="userBookingLocation" placeholder="Location">
+                <input type="text" name="Location" v-model="form.inputs.location" placeholder="Location">
 
                 <div @click="sendBooking" class="green-btn">
                   REQUEST A CALLBACK
@@ -193,7 +193,7 @@
         </div>
 
         <div class="container">
-          <div v-for="element in percentageData" class="progress-ring-card">
+          <div v-for="element in progressRingData" class="progress-ring-card">
             <span class="percentage">{{element.percentage}}%</span>
 
             <h4>{{element.name.toUpperCase()}}</h4>
@@ -290,16 +290,15 @@
           <p>Here’s what our happy drivers had to say about our services:</p>
 
           <div class="testimonials-box-slider-img">
-            <img src="img/testimonial-sophia.png" alt="">
+            <img :src="'img/' + slider.testimonials[slider.index].photo" :alt="slider.testimonials[slider.index].name + ' photo'">
           </div>
 
-          <p>Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first time pass! Highly recommended.</p>
+          <p>{{slider.testimonials[slider.index].statement}}</p>
 
-          <span>Pinco Pallo</span>
+          <span>{{slider.testimonials[slider.index].name}}</span>
 
           <div class="testimonials-box-slider-nav">
-            nav
-            <!-- <i @click="imgIndex = index" v-for="(item, index) in imgs" :class="iActiveOnIndexMatch(index)"></i> -->
+            <i @click="slider.index = index" v-for="(item, index) in slider.testimonials" :class="isIconFull(index) + ' fa-circle'"></i>
           </div>
         </div>
       </div>
@@ -312,24 +311,26 @@
             <h2>Latest News</h2>
 
             <div class="news-box-card-content">
-              <div class="news-box-card-content-article">
+              <div v-for="element in news" class="news-box-card-content-article">
                 <div class="news-box-card-content-article-img">
-                  <img src="img/blog-choosecar-700x441.jpg" alt="">
+                  <img :src="'img/' + element.image" alt="article image">
                 </div>
 
-                <h4>What Car to Start With?</h4>
+                <h4>{{element.title}}</h4>
 
                 <div class="news-box-card-content-article-info">
                   <span class="news-box-card-content-article-info-date">
-                    February 7th, 2019
+                    {{element.date}}
                   </span>
 
                   <span class="news-box-card-content-article-info-pipe">|</span>
 
-                  <span class="news-box-card-content-article-info-comment"> Comments</span>
+                  <span class="news-box-card-content-article-info-comment">
+                    {{element.comments.length}} Comments
+                  </span>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                <p>{{element.preview}}</p>
               </div>
             </div>
 
@@ -377,11 +378,14 @@
             </p>
           </div>
 
-          <div class="contacts-and-courses">
-            <h4></h4>
+          <div v-for="element in footerData" :class="element.title.replace(' ', '-')">
+            <h4>{{element.title.toUpperCase()}}</h4>
+
             <ul>
-              <li>
-                <i class="fas fa-"></i>
+              <li v-for="subelement in element.subheadings">
+                <i :class="subelement.icon"></i>
+
+                <p>{{subelement.content}}</p>
               </li>
             </ul>
           </div>
@@ -411,7 +415,7 @@
             <li><i class="fab fa-facebook-f" title="Facebook"></i></li>
 
             <li><i class="fab fa-twitter" title="Twitter"></i></li>
-            
+
             <li><i class="fab fa-youtube"></i></li>
 
             <li><i class="fab fa-instagram" title="Instagram"></i></li>
@@ -420,6 +424,26 @@
       </div>
     </footer>
     <!-- /footer -->
+
+    <!-- fixed elements -->
+    <div class="fixed-buttons">
+      <div class="demos">
+        <i class="fas fa-folder-open"></i>
+
+        <span>Demos</span>
+      </div>
+
+      <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+
+        <span>Buy Now</span>
+      </div>
+    </div>
+
+    <div @click="returnTop" class="return-top">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- /fixed elements -->
   </div>
   <!-- /Wrapper di pagina che contiene l'app -->
   <script src="js/script.js" charset="utf-8"></script>
